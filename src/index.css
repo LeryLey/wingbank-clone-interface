@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .list{
+        @apply  font-bold uppercase text-gray-500 flex items-center cursor-pointer hover:text-blue;
+    }
+}
