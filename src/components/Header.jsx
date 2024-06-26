@@ -32,34 +32,33 @@ const Header = () => {
           <div
             className={
               !search
-                ? "absolute w-full left-0 flex justify-center items-center h-0 top-0 bg-main overflow-hidden opacity-0 duration-500 ease-out z-20"
-                : "absolute w-full left-0 flex justify-center items-center h-screen top-0 bg-main overflow-hidden opacity-100 duration-500 ease-out z-20"
+                ? "absolute w-full left-0 flex justify-center  h-0 top-0 bg-transparent overflow-hidden    duration-700 ease-out z-20"
+                : "absolute w-full left-0 flex justify-center  h-full top-0 bg-transparent overflow-hidden   duration-700 ease-out z-20"
             }
           >
             <div>
-              <h2 className="text-3xl text-gray-100 mb-5">
-                Search more information
-              </h2>
-              <div className="relative w-96">
+              
+              <div className="relative w-96 p-4 backdrop-blur-md bg-main shadow-md rounded-b-md">
                 <input
                   type="search"
                   name="search"
-                  className="w-full bg-transparent border-b-2 border-gray-200/50 focus:border-gray-200 duration-300 outline-none p-1 pr-10 text-gray-100/60 text-2xl "
+                  placeholder="Search... "
+                  className="w-full bg-transparent border-2 border-gray-200/50 focus:border-gray-200 duration-300 outline-none p-1 pr-10 text-gray-100 text-lg rounded-md placeholder:text-gray-300"
                 />
                 <button
                   onClick={() => setSearch(!search)}
-                  className="absolute right-2 top-2 text-gray-300 hover:text-gray-100 text-2xl duration-300"
+                  className="absolute right-6 top-6  text-gray-300 hover:text-gray-100 text-2xl duration-300"
                 >
                   <ion-icon name="search-outline"></ion-icon>
                 </button>
               </div>
             </div>
-            <button
+            {/* <button
               onClick={() => setSearch(!search)}
               className="absolute right-4 top-4 text-gray-300 hover:text-gray-100 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-500/10  text-4xl duration-300"
             >
               <ion-icon name="close"></ion-icon>
-            </button>
+            </button> */}
           </div>
           {/* language */}
           <button

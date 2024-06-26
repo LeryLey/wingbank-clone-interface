@@ -57,18 +57,22 @@ export const slideShow = [
   {
     id: 1,
     image: SlideOne,
+    path : '/slideOne'
   },
   {
     id: 2,
     image: SlideTwo,
+    path : '/slideTwo'
   },
   {
     id: 3,
     image: SlideThree,
+    path : '/slideThree'
   },
   {
     id: 4,
     image: SlideFour,
+    path : '/slideFour'
   },
 ];
 // dropdown personal

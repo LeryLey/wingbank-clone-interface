@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 const RouterApp = () => {
   return (
     <>
-      <div className="fixed w-full">
+      <div className="sticky top-0 w-full z-10">
         <Header />
         <Navbar />
       </div>
