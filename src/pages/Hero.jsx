@@ -22,7 +22,7 @@ const Hero = () => {
     );
   };
   return (
-    <div className="min-h-screen h-auto flex flex-col pb-10">
+    <div className=" h-auto flex flex-col ">
       <div className="w-full h-[500px] group">
         {/* btn prev  */}
         <button
@@ -47,19 +47,19 @@ const Hero = () => {
         </button>
       </div>
       <main className="my-2 flex flex-col items-center  w-full space-y-10  ">
-        <div className=" grid grid-cols-4 gap-10 p-4 pb-40">
+        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-10 p-4 pb-40">
           {contentInformation.map((element, index) => (
             <ContentInformation key={index} {...element} />
           ))}
         </div>
-        <div className=" p-4 bg-blue w-full h-[600px] flex justify-center ">
-          <div className="w-[60%] relative flex justify-between items-center">
+        <div className=" p-4 bg-blue w-full h-[400px] md:h-[600px] flex justify-center ">
+          <div className="w-full lg:w-[60%] relative flex justify-between items-center">
             <div className="absolute left-0 -translate-y-28">
-              <img src={WingMobile} alt="wing-mobile" className="w-96 " />
+              <img src={WingMobile} alt="wing-mobile" className=" w-60 lg:w-96 " />
             </div>
             <div></div>
             <div className="block space-y-4">
-              <h2 className="text-6xl  text-white">Get the Wing <br /> Bank App Now!</h2>
+              <h2 className=" text-4xl md:text-6xl  text-white">Get the Wing <br /> Bank App Now!</h2>
               <p className="text-gray-300 w-96 text-base">
                 You can download the Wing Bank App from the App Store or Google
                 Play.

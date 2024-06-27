@@ -5,4 +5,7 @@
     .list{
         @apply  font-bold uppercase text-gray-500 flex items-center cursor-pointer hover:text-blue;
     }
+    .social-link{
+        @apply  font-bold uppercase bg-blue hover:bg-white text-white hover:text-blue duration-300 p-2 rounded-full flex items-center cursor-pointer ;
+    }
 }

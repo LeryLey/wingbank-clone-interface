@@ -3,13 +3,19 @@ import { useState } from "react";
 import { headerLink } from "../constants";
 import FlagKhmer from "/src/assets/cambodia.jpg";
 import FlagEnglish from "/src/assets/Flag_of_the_United_Kingdom.png";
+import Logo from "/src/assets/wb-logo-foot.png";
+import { personal, business, wingBankApp, selfServices, support } from "../constants";
 const Header = () => {
   const [search, setSearch] = useState(false);
   const [language, setLanguage] = useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
   return (
-    <header className="bg-main flex justify-center items-center px-4 py-3">
+    <header className="bg-main flex lg:justify-center justify-between items-center px-4 py-3">
+      <div className="flex lg:hidden">
+        <img src={Logo} alt="logo" className="w-32" />
+      </div>
       <div className="flex items-center">
-        <ul className="flex gap-3">
+        <ul className="lg:flex hidden gap-3">
           {headerLink.map((link, index) => (
             <Link
               to={link.path}
@@ -20,11 +26,11 @@ const Header = () => {
             </Link>
           ))}
         </ul>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ">
           {/* search  */}
           <button
             onClick={() => setSearch(!search)}
-            className="text-white text-xl hover:text-gray-100 ml-3 flex"
+            className="text-white text-xl hover:text-gray-100 ml-3 lg:flex hidden"
           >
             <ion-icon name="search-outline"></ion-icon>
           </button>
@@ -37,7 +43,6 @@ const Header = () => {
             }
           >
             <div>
-              
               <div className="relative w-96 p-4 backdrop-blur-md bg-main shadow-md rounded-b-md">
                 <input
                   type="search"
@@ -53,12 +58,7 @@ const Header = () => {
                 </button>
               </div>
             </div>
-            {/* <button
-              onClick={() => setSearch(!search)}
-              className="absolute right-4 top-4 text-gray-300 hover:text-gray-100 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-500/10  text-4xl duration-300"
-            >
-              <ion-icon name="close"></ion-icon>
-            </button> */}
+      
           </div>
           {/* language */}
           <button
@@ -90,6 +90,41 @@ const Header = () => {
             <ion-icon name="globe-outline"></ion-icon>
             <span>Internet Bank</span>
           </button>
+        </div>
+        {/* menu toggle */}
+        <button
+          onClick={() => setMenuToggle(!menuToggle)}
+          className="text-white text-4xl ml-2 flex lg:hidden"
+        >
+          {!menuToggle ? (
+            <ion-icon name="menu"></ion-icon>
+          ) : (
+            <ion-icon name="close"></ion-icon>
+          )}
+        </button>
+        {/* responsive menu  */}
+        <div
+          className={
+            !menuToggle
+              ? "absolute lg:hidden block top-full w-full h-0 left-0  overflow-auto bg-blue duration-500 ease-out"
+              : "absolute lg:hidden block top-full w-full h-full left-0  overflow-auto bg-blue duration-500 ease-out"
+          }
+        >
+          <div className="bg-white p-2 w-full flex items-center gap-3">
+            <input
+              type="text"
+              placeholder="Search.."
+              className="w-full text-lg bg-gray-200 px-2 py-2 rounded-md border-2 focus:border-blue duration-300 outline-none "
+            />
+            <button className="w-11 h-11 p-2 flex items-center justify-center bg-blue text-white rounded-full text-xl">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+          {/* menu  */}
+          <div className="bg-blue">
+
+          </div>
+          
         </div>
       </div>
     </header>

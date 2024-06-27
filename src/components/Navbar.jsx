@@ -6,7 +6,7 @@ import { business } from "../constants";
 const Navbar = () => {
   return (
     <nav className="w-full bg-white flex justify-center shadow relative">
-      <ul className=" items-center gap-3 md:flex hidden">
+      <ul className=" items-center gap-3 lg:flex hidden">
         <img src={Logo} alt="logo" className="w-56 mr-40 " />
         <li className="group py-10">
           <a className="list">

@@ -2,6 +2,7 @@ import Header from "./Header";
 import Navbar from "./Navbar";
 import Hero from "../pages/Hero";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./Footer";
 const RouterApp = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const RouterApp = () => {
         <Route path="/about" element={<div>About</div>} />
         <Route path="/contact" element={<div>Contact</div>} />
       </Routes>
+      <Footer />
     </>
   );
 };
