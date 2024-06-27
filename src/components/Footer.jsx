@@ -4,7 +4,7 @@ import Sisa from "/src/assets/certification_sisa.png";
 const Footer = () => {
   return (
     <div className="bg-main flex flex-col items-center ">
-      <div className="flex md:flex-row flex-col items-center  md:items-start justify-center md:space-y-0 space-y-10 p-4">
+      <div className="flex md:flex-row flex-col items-center  md:items-start justify-center md:space-y-0 space-y-10 p-4 gap-0 md:gap-20">
         <div>
           <img src={FooterLogo} alt="footer-logo" className="w-52" />
           <div className="flex gap-2">
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="flex">
+          <div className="flex flex-wrap justify-center mb-2">
             <Link>
               <button className="border-r-2 mr-2 pr-2 text-white text-base font-medium">
                 Disclaimer
@@ -63,8 +63,8 @@ const Footer = () => {
               </button>
             </Link>
           </div>
-          <div className="w-[580px]">
-            <p className="w-full text-center text-gray-100">
+          <div className="w-full flex flex-col items-center justify-center ">
+            <p className="w-96 sm:w-[500px] text-center text-gray-100">
               Wing Tower, Preah Monivong Blvd. corner Kampuchea Krom Blvd., Phum
               6, Sangkat Monourom, Khan Prampir Meakkakra, Phnom Penh. Swift
               code WIGCKHPP

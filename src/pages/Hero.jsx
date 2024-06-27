@@ -34,7 +34,7 @@ const Hero = () => {
         </button>
         <Link to={`${slideShow[currentIndex].path}`}>
           <div
-            className={`w-full h-full duration-500 bg-cover `}
+            className={`w-full h-full duration-500 bg-center bg-cover`}
             style={{ background: `url(${slideShow[currentIndex].image})` }}
           ></div>
         </Link>
@@ -47,18 +47,18 @@ const Hero = () => {
         </button>
       </div>
       <main className="my-2 flex flex-col items-center  w-full space-y-10  ">
-        <div className=" grid grid-cols-2 lg:grid-cols-4 gap-10 p-4 pb-40">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 p-4 pb-40">
           {contentInformation.map((element, index) => (
             <ContentInformation key={index} {...element} />
           ))}
         </div>
-        <div className=" p-4 bg-blue w-full h-[400px] md:h-[600px] flex justify-center ">
-          <div className="w-full lg:w-[60%] relative flex justify-between items-center">
-            <div className="absolute left-0 -translate-y-28">
+        <div className=" p-4 bg-blue w-full sm:h-[400px] md:h-[600px] flex  justify-center ">
+          <div className="w-full lg:w-[60%] relative  flex sm:flex-row flex-col sm:justify-between justify-center items-center">
+            <div className="sm:absolute relative left-0 -translate-y-20 sm:-translate-y-28">
               <img src={WingMobile} alt="wing-mobile" className=" w-60 lg:w-96 " />
             </div>
             <div></div>
-            <div className="block space-y-4">
+            <div className="block space-y-4 sm:text-start text-center">
               <h2 className=" text-4xl md:text-6xl  text-white">Get the Wing <br /> Bank App Now!</h2>
               <p className="text-gray-300 w-96 text-base">
                 You can download the Wing Bank App from the App Store or Google

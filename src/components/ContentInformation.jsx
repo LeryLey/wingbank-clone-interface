@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const ContentInformation = ({ title, img, txt, path }) => {
   return (
-    <article className="w-60 text-center space-y-3">
+    <article className="sm:w-60 w-96 text-center space-y-3 flex flex-col items-center">
       <h2 className="text-main font-bold uppercase text-xl">{title}</h2>
       <div className="w-full h-40 rounded-md overflow-hidden">
         <img src={img} alt={title} className="w-full h-full object-cover hover:scale-[1.1] duration-300" />
